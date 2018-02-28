@@ -42,10 +42,10 @@ public class StoreItemHandler {
         try {
             double totalValue;
             double profit;
-            System.out.printf("Item Name" + "Bought At" + "Sold At" + "AvailableQty" + "Value");
-            System.out.printf("---------" + "---------" + "-------" + "------------" + "-----");
+            System.out.println("Item Name" + "Bought At" + "Sold At" + "AvailableQty" + "Value");
+            System.out.println("---------" + "---------" + "-------" + "------------" + "-----");
             for(StoreItem item: StoreItemWarehouse.getSoldItems()){
-                System.out.println(item.toString());
+                System.out.println(item.getName() + " number sold: " + item.getNumberSold());
             }
         }catch(Exception exp){
             System.out.println(exp.getClass().getSimpleName());
